@@ -2,7 +2,7 @@
  * @Author: DevZhang
  * @Date: 2019-06-29 13:18:36
  * @Last Modified by: DevZhang
- * @Last Modified time: 2019-06-29 13:20:22
+ * @Last Modified time: 2019-06-29 22:20:04
  */
 
 const path = require('path');
@@ -15,6 +15,7 @@ module.exports = {
         config.resolve.alias
             .set('@$', resolve('src'))
             .set('assets',resolve('src/assets'))
+            .set('styles',resolve('src/assets/styles'))
             .set('pages',resolve('src/pages'))
     }
 }
