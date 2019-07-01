@@ -2,7 +2,11 @@
  * @Author: DevZhang
  * @Date: 2019-06-29 13:19:03
  * @Last Modified by: DevZhang
+<<<<<<< HEAD
  * @Last Modified time: 2019-06-29 22:59:32
+=======
+ * @Last Modified time: 2019-07-01 12:51:20
+>>>>>>> dev
  */
 
 import Vue from 'vue'
