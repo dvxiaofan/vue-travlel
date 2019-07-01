@@ -5,7 +5,7 @@
         <img :src="item.imgUrl" class="swiper-img">
       </swiper-slide>
       <div class="swiper-pagination"  slot="pagination"></div>
-  </swiper>
+    </swiper>
   </div>
 </template>
 
@@ -20,11 +20,11 @@ export default {
       imgUrlList: [
         {
           id: '0001',
-          imgUrl: 'https://img1.qunarzz.com/vc/5c/4a/42/31cd9cf831d4e9d8e2c898f1e8.jpg_624x340x92.jpg'
+          imgUrl: 'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20196/818f6cc784ae6669b74bbbb255414a53.jpg_750x200_66ca5873.jpg'
         },
         {
           id: '0002',
-          imgUrl: 'https://imgs.qunarzz.com/ftejia/1809/f1/5237b904291291.jpg'
+          imgUrl: 'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/87a224d0349d94a11e97f31aa1aba4f5.jpg_750x200_1f78af87.jpg'
         }
       ]
     }
@@ -40,7 +40,7 @@ export default {
   overflow hidden
   width 100%
   height 0
-  padding-bottom 53.25%
+  padding-bottom 26.15%
   .swiper-img
     width 100%
 </style>
