@@ -8,7 +8,7 @@
       输入城市景点/游玩主题
     </div>
     <div class="header-right">
-      城市
+      武汉
       <span class="iconfont arrow-icon">&#xe64a;</span>
     </div>
   </div>
