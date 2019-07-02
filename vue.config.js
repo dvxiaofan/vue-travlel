@@ -2,7 +2,7 @@
  * @Author: DevZhang
  * @Date: 2019-06-29 13:18:36
  * @Last Modified by: DevZhang
- * @Last Modified time: 2019-06-29 22:20:04
+ * @Last Modified time: 2019-07-02 22:19:38
  */
 
 const path = require('path');
@@ -16,6 +16,6 @@ module.exports = {
             .set('@$', resolve('src'))
             .set('assets',resolve('src/assets'))
             .set('styles',resolve('src/assets/styles'))
-            .set('pages',resolve('src/pages'))
+            .set('@pages',resolve('src/pages'))
     }
 }
