@@ -2,7 +2,7 @@
   <div>
     <div class="title">猜你喜欢</div>
     <ul>
-      <li class="item border-bottom" v-for="item in recommendList" :key="item.id">
+      <li class="item border-bottom" v-for="item in list" :key="item.id">
         <img :src="item.imgUrl" alt="item-img" class="item-img">
         <div class="item-info">
           <p class="item-title">{{item.title}}</p>
@@ -17,59 +17,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [
-        {
-          id: '001',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1709/dc/dc83333aca70040da3.img.jpg_200x200_8fc200de.jpg',
-          title: '武汉海昌极地海洋公园',
-          desc: '87697条评价'
-        },
-        {
-          id: '002',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1504/47/4730a0c01664b63d.water.jpg_200x200_d7f52253.jpg',
-          title: '武汉欢乐谷',
-          desc: '21459条评论'
-        },
-        {
-          id: '003',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/201405/27/11a29c646d897af77648bc3d98949107.jpg_200x200_0b6014b8.jpg',
-          title: '九峰动物园',
-          desc: '21459条评论'
-        },
-        {
-          id: '004',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1703/a4/a4357d1a8afc001da3.water.jpg_200x200_872a1b11.jpg',
-          title: '武汉东湖磨山',
-          desc: '4125条评论'
-        },
-        {
-          id: '005',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1709/dc/dc83333aca70040da3.img.jpg_200x200_8fc200de.jpg',
-          title: '武汉海昌极地海洋公园',
-          desc: '87697条评价'
-        },
-        {
-          id: '006',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1504/47/4730a0c01664b63d.water.jpg_200x200_d7f52253.jpg',
-          title: '武汉欢乐谷',
-          desc: '21459条评论'
-        },
-        {
-          id: '007',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/201405/27/11a29c646d897af77648bc3d98949107.jpg_200x200_0b6014b8.jpg',
-          title: '九峰动物园',
-          desc: '21459条评论'
-        },
-        {
-          id: '008',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1703/a4/a4357d1a8afc001da3.water.jpg_200x200_872a1b11.jpg',
-          title: '武汉东湖磨山',
-          desc: '4125条评论'
-        }
-      ]
-    }
+  props: {
+    list: Array
   }
 }
 </script>

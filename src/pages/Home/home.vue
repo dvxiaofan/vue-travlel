@@ -1,10 +1,10 @@
 <template>
   <div class="main-page">
-    <home-header></home-header>
-    <home-swiper v-bind="indexData"></home-swiper>
-    <home-icons></home-icons>
-    <home-recommend></home-recommend>
-    <home-weekend></home-weekend>
+    <home-header :city="city"></home-header>
+    <home-swiper :list="swiperList"></home-swiper>
+    <home-icons :list="iconList"></home-icons>
+    <home-recommend :list="recommendList"></home-recommend>
+    <home-weekend :list="weekendList"></home-weekend>
   </div>
 </template>
 
@@ -20,7 +20,11 @@ export default {
   name: 'home',
   data () {
     return {
-      indexData: {}
+      city: '',
+      swiperList: [],
+      recommendList: [],
+      weekendList: [],
+      iconList: []
     }
   },
   components: {
@@ -36,8 +40,13 @@ export default {
         .then(this.getHomeInfoSucc)
     },
     getHomeInfoSucc (res) {
-      console.log('res: ', res.data.data)
-      this.indexData = res.data
+      res = res.data
+      let resData = res.data
+      this.city = res.city
+      this.swiperList = resData.swiperList
+      this.iconList = resData.iconList
+      this.recommendList = resData.recommendList
+      this.weekendList = resData.weekendList
     }
   },
   mounted () {
