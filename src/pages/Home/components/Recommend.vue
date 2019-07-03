@@ -79,7 +79,7 @@ export default {
 .title
   margin-top .2rem
   line-height .8rem
-  background #eee
+  // background #eee
   text-indent .2rem
 .item
   overflow hidden

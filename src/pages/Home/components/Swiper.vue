@@ -13,6 +13,7 @@
 export default {
   data () {
     return {
+      props: ['indexData'],
       swiperOption: {
         pagination: '.swiper-pagination',
         loop: true,
@@ -37,6 +38,9 @@ export default {
         }
       ]
     }
+  },
+  mounted () {
+    console.log('data: ', this.props);
   },
   name: 'HomeSwiper'
 }
