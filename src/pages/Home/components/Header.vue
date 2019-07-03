@@ -7,10 +7,10 @@
       <span class="iconfont">&#xe615;</span>
       输入城市景点/游玩主题
     </div>
-    <div class="header-right">
+    <router-link tag="div" class="header-right" to="/city">
       {{city}}
       <span class="iconfont arrow-icon">&#xe64a;</span>
-    </div>
+    </router-link>
   </div>
 </template>
 
@@ -27,7 +27,8 @@ export default {
 @import '~styles/varibles.styl'
   .header
     display flex
-    line-height .86rem
+    height $headerH
+    line-height $headerH
     background $bgColor
     color #fff
     .header-left
