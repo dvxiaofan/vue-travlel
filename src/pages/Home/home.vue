@@ -15,16 +15,21 @@ import HomeIcons from './components/Icons'
 import HomeRecommend from './components/Recommend'
 import HomeWeekend from './components/Weekend'
 import axios from 'axios'
+import { mapState } from 'vuex'
 
 export default {
   name: 'home',
   data () {
     return {
+      lastCity: '',
       swiperList: [],
       recommendList: [],
       weekendList: [],
       iconList: []
     }
+  },
+  computed: {
+    ...mapState(['city'])
   },
   components: {
     HomeHeader,
@@ -35,7 +40,7 @@ export default {
   },
   methods: {
     getHomeInfo () {
-      axios.get('https://www.easy-mock.com/mock/5ca56f0706e65a2e94712962/api/index')
+      axios.get('https://www.easy-mock.com/mock/5ca56f0706e65a2e94712962/api/index?city=' + this.city)
         .then(this.getHomeInfoSucc)
     },
     getHomeInfoSucc (res) {
@@ -48,7 +53,14 @@ export default {
     }
   },
   mounted () {
+    this.lastCity = this.city
     this.getHomeInfo()
+  },
+  activated () { // keep-alive 自带生命周期, 用于监听组件更新
+    if (this.lastCity !== this.city) {
+      this.lastCity = this.city
+      this.getHomeInfo()
+    }
   }
 }
 </script>
