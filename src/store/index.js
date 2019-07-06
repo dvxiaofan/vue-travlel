@@ -1,21 +1,18 @@
+/*
+ * @Author: DevZhang
+ * @Date: 2019-07-06 22:26:16
+ * @Last Modified by: DevZhang
+ * @Last Modified time: 2019-07-06 22:30:58
+ */
+
 import Vue from 'vue'
 import Vuex from 'vuex'
+import state from './state'
+import mutations from './mutations'
 
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-  state: {
-    city: '武汉'
-  },
-  // actions: {
-  //   // 第一个参数是上下文 数据简单, 没有异步操作, 可以不需要actions 转发
-  //   changeCity (ctx, city) {
-  //     ctx.commit('changeCity', city)
-  //   }
-  // },
-  mutations: {
-    changeCity (state, city) {
-      state.city = city
-    }
-  }
+  state,
+  mutations
 })
