@@ -2,7 +2,7 @@
  * @Author: DevZhang
  * @Date: 2019-06-29 13:19:03
  * @Last Modified by: DevZhang
- * @Last Modified time: 2019-07-01 22:54:58
+ * @Last Modified time: 2019-07-06 16:31:43
  */
 
 import Vue from 'vue'
@@ -10,6 +10,7 @@ import App from './App.vue'
 import router from './router'
 import fastClick from 'fastclick'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
+import store from './store/index'
 import 'styles/reset.css'
 import 'styles/border.css'
 import 'styles/iconfont.css'
@@ -21,5 +22,6 @@ Vue.use(VueAwesomeSwiper)
 
 new Vue({
   router,
+  store,
   render: h => h(App)
 }).$mount('#app')
