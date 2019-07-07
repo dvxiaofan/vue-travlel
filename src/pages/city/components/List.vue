@@ -73,6 +73,10 @@ export default {
     ...mapMutations(['changeCity'])
   },
   mounted () {
+    // this.scroll = new BScroll(this.$refs.wrapper)
+  },
+  activated () { // keep-alive 自带生命周期, 用于监听组件更新
+    // 有时候进入城市列表会无法滚动, 尝试通过 activate的钩子处理添加滚动事件
     this.scroll = new BScroll(this.$refs.wrapper)
   }
 }
