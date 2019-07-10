@@ -63,7 +63,8 @@ export default {
     .gallary-img
       width 100%;
     .swiper-pagination
+      position fixed;
       color #fff;
       font-size .24rem;
-      bottom -4.4rem;
+      bottom 1rem;
 </style>
