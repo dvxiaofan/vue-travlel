@@ -6,11 +6,14 @@
       <!-- </span> -->
       <span class="title">本周热门榜单</span>
     </div>
-    <div class="list-item" v-for="(item, index) in list" :key="index">
-      <img :src="item.imgUrl" alt="" class="item-img">
-      <div class="item-title">{{item.title}}</div>
-      <div class="price">
-        <span class="price-num">'¥'{{item.price}}起</span>
+    <div class="item-content" >
+      <div class="item" v-for="(item, index) in list" :key="index">
+        <img :src="item.imgUrl" alt="" class="item-img">
+        <div class="item-title">{{item.title}}</div>
+        <div class="price">
+          <span class="price-num">¥{{item.price}}</span>
+          起
+        </div>
       </div>
     </div>
   </div>
@@ -18,66 +21,22 @@
 
 <script>
 export default {
-  name: 'HomeHotList',
-  data () {
-    return {
-      list: [
-        {
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1609/73/738c9707d753117ba3.img.jpg_250x250_ce922802.jpg',
-          title: '贺兰山广宗寺（南寺）',
-          price: '70'
-        },
-        {
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1409/15/2cd24bb4ca30169611d8fe0263c3d5e0.jpg_250x250_432f8ced.jpg',
-          title: '腾格里沙漠天鹅湖',
-          price: '35'
-        },
-        {
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/201403/07/c94ceadc0abc7dbb072ca962851af051.jpg_250x250_3c3caba7.jpg',
-          title: '阿拉善通湖草原',
-          price: '69'
-        },
-        {
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1708/3d/3d1631412590a1aea3.img.png_250x250_8047fda9.png',
-          title: '贺兰山福因寺（北寺旅游景区）',
-          price: '199'
-        },
-        {
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1609/73/738c9707d753117ba3.img.jpg_250x250_ce922802.jpg',
-          title: '贺兰山广宗寺（南寺）',
-          price: '70'
-        },
-        {
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1409/15/2cd24bb4ca30169611d8fe0263c3d5e0.jpg_250x250_432f8ced.jpg',
-          title: '腾格里沙漠天鹅湖',
-          price: '35'
-        },
-        {
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/201403/07/c94ceadc0abc7dbb072ca962851af051.jpg_250x250_3c3caba7.jpg',
-          title: '阿拉善通湖草原',
-          price: '69'
-        },
-        {
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1708/3d/3d1631412590a1aea3.img.png_250x250_8047fda9.png',
-          title: '贺兰山福因寺（北寺旅游景区）',
-          price: '199'
-        }
-      ]
-    }
-  }
+  props: {
+    list: Array
+  },
+  name: 'HomeHotList'
 }
 </script>
 
 <style lang="stylus" scoped>
+@import '~styles/mixins.styl'
 .hot-list
   position relative;
   overflow hidden;
   height 0;
   border-top .2rem solid #eee;
-  padding-bottom 40%;
+  padding-bottom 50%;
   .list-title
-    // height .44rem;
-    // line-height .44rem;
     padding-top .2rem;
     margin-bottom .2rem;
     .title-img
@@ -92,4 +51,32 @@ export default {
       line-height .44rem;
       color #212121;
       font-size .32rem;
+  .item-content
+    padding 0 .24rem;
+    overflow-x scroll;
+    white-space nowrap;
+    padding-bottom 40%;
+    .item:not(:first-child)
+      margin-left .12rem;
+    .item
+      position relative;
+      display inline-block;
+      width 2rem;
+      padding 0 0 .2rem;
+      .item-img
+        width 100%;
+      .item-title
+        margin-top: .12rem;
+        color: #212121;
+        font-size: .24rem;
+        line-height: .32rem;
+        text-align: center;
+        ellipsis();
+      .price
+        color: #616161;
+        font-size: .24rem;
+        line-height: .36rem;
+        text-align: center;
+        .price-num
+          color #ff8300;
 </style>

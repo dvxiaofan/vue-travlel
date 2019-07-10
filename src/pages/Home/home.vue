@@ -3,7 +3,7 @@
     <home-header></home-header>
     <home-swiper :list="swiperList"></home-swiper>
     <home-icons :list="iconList"></home-icons>
-    <home-hot-list></home-hot-list>
+    <home-hot-list :list="hotList"></home-hot-list>
     <home-recommend :list="recommendList"></home-recommend>
     <home-weekend :list="weekendList"></home-weekend>
   </div>
@@ -27,7 +27,8 @@ export default {
       swiperList: [],
       recommendList: [],
       weekendList: [],
-      iconList: []
+      iconList: [],
+      hotList: []
     }
   },
   computed: {
@@ -53,6 +54,7 @@ export default {
       this.iconList = resData.iconList
       this.recommendList = resData.recommendList
       this.weekendList = resData.weekendList
+      this.hotList = resData.hotList
     }
   },
   mounted () {
