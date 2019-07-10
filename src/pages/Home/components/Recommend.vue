@@ -1,6 +1,9 @@
 <template>
   <div>
-    <div class="title">猜你喜欢</div>
+    <div class="title-content">
+      <img class="title-img" src="http://img1.qunarzz.com/piao/fusion/1711/89/ebc329f16c55bb02.png" alt="title-img">
+      <span class="title">猜你喜欢</span>
+    </div>
     <ul>
       <router-link tag="li"
         class="item border-bottom"
@@ -30,11 +33,22 @@ export default {
 
 <style lang="stylus" scoped>
 @import '~styles/mixins.styl'
-.title
-  margin-top .2rem
-  line-height .8rem
-  // background #eee
-  text-indent .2rem
+.title-content
+  border-top .2rem solid #eee;
+  padding .12rem .2rem;
+  .title-img
+    display: inline-block;
+    overflow: hidden;
+    width: .3rem;
+    height: .3rem;
+    padding-bottom .07rem;
+  .title
+    display: inline-block;
+    margin-left: .08rem;
+    height: .44rem;
+    color: #212121;
+    font-size: .32rem;
+    line-height: .44rem;
 .item
   overflow hidden
   display flex
