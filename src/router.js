@@ -23,5 +23,9 @@ export default new Router({
       name: 'Detail',
       component: Detail
     }
-  ]
+  ],
+  // 新进入页面的时候始终在页面顶部
+  scrollBehavior (to, from, savedPosition) {
+    return { x: 0, y: 0 }
+  }
 })

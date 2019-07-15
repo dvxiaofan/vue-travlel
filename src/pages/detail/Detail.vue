@@ -52,10 +52,7 @@ export default {
       }
     }
   },
-  // mounted () {
-  //   this.getDetailInfo()
-  // },
-  activated () {
+  mounted () {
     this.getDetailInfo()
   }
 }
