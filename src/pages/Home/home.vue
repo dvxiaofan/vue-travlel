@@ -20,7 +20,7 @@ import axios from 'axios'
 import { mapState } from 'vuex'
 
 export default {
-  name: 'home',
+  name: 'Home',
   data () {
     return {
       lastCity: '',
