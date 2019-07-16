@@ -1,29 +1,19 @@
 # vue-travel
 
-## Project setup
+## 项目预览步骤
+
+### 安装依赖
+
 ```
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+### 启动本地预览服务器
+
 ```
 yarn run serve
 ```
 
-### Compiles and minifies for production
-```
-yarn run build
-```
 
-### Run your tests
-```
-yarn run test
-```
-
-### Lints and fixes files
-```
-yarn run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### 了解更多自定义配置
+查阅  [Vue CLI官方文档](https://cli.vuejs.org/zh/config/).
