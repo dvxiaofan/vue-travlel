@@ -45,6 +45,7 @@ export default {
     }
   },
   mounted () {
+    // test
     this.getCityInfo()
   }
 }
